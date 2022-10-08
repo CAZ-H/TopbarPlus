@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://1ForeverHD.github.io/TopbarPlus/api/icon/">
       
       <link rel="icon" href="https://user-images.githubusercontent.com/51117782/113474423-cefa8900-9467-11eb-8678-d69cbb0b3966.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.3">
+      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7a952b86.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
@@ -689,6 +689,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#call" class="md-nav__link">
+    call
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#give" class="md-nav__link">
     give
   </a>
@@ -705,6 +712,13 @@
           <li class="md-nav__item">
   <a href="#unlock" class="md-nav__link">
     unlock
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debounce" class="md-nav__link">
+    debounce
   </a>
   
 </li>
@@ -1370,6 +1384,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#call" class="md-nav__link">
+    call
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#give" class="md-nav__link">
     give
   </a>
@@ -1386,6 +1407,13 @@
           <li class="md-nav__item">
   <a href="#unlock" class="md-nav__link">
     unlock
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debounce" class="md-nav__link">
+    debounce
   </a>
   
 </li>
@@ -1920,6 +1948,12 @@ Binds a <a href="https://developer.roblox.com/en-us/api-reference/enum/KeyCode">
 </code></pre></div>
 Unbinds the given keycode.</p>
 <hr />
+<h4 id="call">call<a class="headerlink" href="#call" title="Permanent link">&para;</a></h4>
+<p>{chainable}
+<div class="highlight"><pre><span></span><code><span class="n">icon</span><span class="p">:</span><span class="n">call</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+</code></pre></div>
+Calls the function as a separate coroutine with the first argument being the icon itself. This is useful when needing to extend the behaviour of an icon while remaining in the chain.</p>
+<hr />
 <h4 id="give">give<a class="headerlink" href="#give" title="Permanent link">&para;</a></h4>
 <p>{chainable}
 <div class="highlight"><pre><span></span><code><span class="n">icon</span><span class="p">:</span><span class="n">give</span><span class="p">(</span><span class="n">userdata</span><span class="p">)</span>
@@ -1937,6 +1971,12 @@ Prevents the icon being toggled by user-input (such as clicking) however the ico
 <div class="highlight"><pre><span></span><code><span class="n">icon</span><span class="p">:</span><span class="n">unlock</span><span class="p">()</span>
 </code></pre></div>
 Re-enables user-input to toggle the icon again.</p>
+<hr />
+<h4 id="debounce">debounce<a class="headerlink" href="#debounce" title="Permanent link">&para;</a></h4>
+<p>{chainable} {yields}
+<div class="highlight"><pre><span></span><code><span class="n">icon</span><span class="p">:</span><span class="n">debounce</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+</code></pre></div>
+Locks the icon, yields for the given time, then unlocks the icon, effectively shorthand for <code>icon:lock() task.wait(seconds) icon:unlock()</code>. This is useful for applying cooldowns (to prevent an icon from being pressed again) after an icon has been selected or deselected. </p>
 <hr />
 <h4 id="autodeselect">autoDeselect<a class="headerlink" href="#autodeselect" title="Permanent link">&para;</a></h4>
 <p>{chainable}
@@ -2259,7 +2299,7 @@ The position the icon is at or aims to move to.</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.37e9125f.min.js"></script>
+      <script src="../../assets/javascripts/bundle.078830c0.min.js"></script>
       
         <script src="../../javascripts/tags.js"></script>
       
